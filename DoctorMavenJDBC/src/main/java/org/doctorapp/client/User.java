@@ -1,0 +1,24 @@
+package org.doctorapp.client;
+
+import org.doctorapp.model.Doctor;
+import org.doctorapp.model.Specialisation;
+import org.doctorapp.service.DoctorServiceImpl;
+import org.doctorapp.service.IDoctorService;
+
+import javax.print.Doc;
+
+public class User {
+    public static void main(String[] args) {
+        IDoctorService doctorService = new DoctorServiceImpl();
+
+
+        //enum constant
+        Specialisation specialization = Specialisation.ORTHO;
+        String speciality = specialization.getSpeciality();
+//        String special = specialization.getSpeciality();
+
+
+        Doctor doctor = new Doctor("Vinay",speciality,4500,10,12);
+        doctorService.addDoctor(doctor);
+    }
+}
