@@ -6,7 +6,6 @@ import org.doctorapp.util.DoctorDb;
 import org.doctorapp.util.Queries;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -242,12 +241,12 @@ public class DoctorRepositoryImpl implements IDoctorRepository {
 
     @Override
     public Doctor findById(int doctorId) throws IdNotFoundExceptions {
-        List<Doctor> doctorList = new ArrayList<>();
+        Doctor doctor=null;
         try (
                 Connection connection = DoctorDb.openConnection();
                 PreparedStatement statement = connection.prepareStatement(Queries.FINDBYID);
         ) {
-            statement.Int(1, doctorId);
+            statement.setInt(1,doctorId);
             try (
                     ResultSet resultSet = statement.executeQuery();
             ) {
@@ -257,14 +256,14 @@ public class DoctorRepositoryImpl implements IDoctorRepository {
                     double fees = resultSet.getInt("fees");
                     int ratings = resultSet.getInt("ratings");
                     int experience = resultSet.getInt("experience");
-                    Doctor doctor = new Doctor(doctorId, doctorName, speciality, fees, ratings, experience);
-                    doctorList.add(doctor);
+                    doctor = new Doctor(doctorId, doctorName, speciality, fees, ratings, experience);
+
                 }
             }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return doctorList;
+        return doctor;
     }
 }

@@ -11,6 +11,8 @@ public interface IBookService {
     void addBook(Book book);
     void UpdateBook(int bookId,  double price);
     void deleteBook(int bookId);
+    Book getbyId(int bookId) throws IdNotFoundException;
+
 
     List<Book> getAll();
 
@@ -19,5 +21,4 @@ public interface IBookService {
     List<Book> getByPriceLessThan(double price) throws BookNotFoundException;
     List<Book> getByAuthorContainsAndCategory(String author,String category) throws BookNotFoundException;
 
-    Book getbyId(int bookId) throws IdNotFoundException;
 }

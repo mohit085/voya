@@ -6,12 +6,11 @@ import com.bookapp.model.Book;
 
 import java.util.List;
 
-// from hereconnect to db
+// from here connect to db
 public class BookRepositoryImpl implements IBookRepository{
     @Override
     public void addBook(Book book) {
         //establish connection
-
 
     }
 
@@ -27,11 +26,13 @@ public class BookRepositoryImpl implements IBookRepository{
 
     @Override
     public Book findById(int bookId) throws IdNotFoundException {
+
         return null;
     }
 
     @Override
     public List<Book> findAll() {
+
         return null;
     }
 

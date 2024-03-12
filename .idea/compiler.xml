@@ -12,5 +12,8 @@
         <module name="BookMavenJdbc" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="JUnitDemos" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

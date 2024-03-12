@@ -8,7 +8,13 @@
         <option value="$PROJECT_DIR$/JDBCDemos/pom.xml" />
         <option value="$PROJECT_DIR$/BookMavenJdbc/pom.xml" />
         <option value="$PROJECT_DIR$/DoctorMavenJDBC/pom.xml" />
+        <option value="$PROJECT_DIR$/JUnitDemos/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/JUnitDemos/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager">
