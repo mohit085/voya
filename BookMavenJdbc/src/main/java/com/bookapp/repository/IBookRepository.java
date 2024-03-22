@@ -17,6 +17,7 @@ public interface IBookRepository {
     //user
     List<Book> findAll(); //retrieve
     List<Book> findByAuthor(String author) throws BookNotFoundException;
+    List<Book> findByCategory(String category) throws BookNotFoundException;
     List<Book> findByLesserPrice(double price) throws BookNotFoundException;
     List<Book> findByAuthorCategory(String author,String category) throws BookNotFoundException;
 }

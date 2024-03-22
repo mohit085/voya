@@ -118,6 +118,7 @@ public class DoctorRepositoryImpl implements IDoctorRepository {
                     doctor.setFees(fees);
                     doctor.setRatings(ratings);
                     doctor.setExperience(experience);
+                    doctorList.add(doctor);
                 }
             }
         } catch (Exception e) {

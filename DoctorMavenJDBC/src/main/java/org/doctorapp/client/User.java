@@ -15,10 +15,11 @@ public class User {
         //enum constant
         Specialisation specialization = Specialisation.ORTHO;
         String speciality = specialization.getSpeciality();
+        System.out.println(speciality);
 //        String special = specialization.getSpeciality();
 
 
-        Doctor doctor = new Doctor("Vinay",speciality,4500,10,12);
-        doctorService.addDoctor(doctor);
+//        Doctor doctor = new Doctor("abc",speciality,500,10,12);
+//        doctorService.addDoctor(doctor);
     }
 }

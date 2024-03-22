@@ -8,7 +8,15 @@ public class Book {
     private double price;
 
     public Book() {
+
         super();
+    }
+
+    public Book(String title, String author, String category, double price) {
+        this.title = title;
+        this.author = author;
+        this.category = category;
+        this.price = price;
     }
 
     public Book(String title, String author, String category, Integer bookId, double price) {

@@ -12,7 +12,6 @@ public class BookServiceImpl implements IBookService{
     List<Book> books  = BookDetails.showBooks(); // taking data from database
     @Override
     public List<Book> getAll() {
-
         return books;
     }
 
